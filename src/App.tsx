@@ -89,7 +89,7 @@ export default class App extends Component {
       <div>
         <div>
           <Box className="firstRow" display="flex" flexDirection="row" p={1} m={1} bgcolor="background.paper">
-            <Box className="dataBox" width="50vh" p={1} bgcolor="grey.300">
+            <Box className="dataBox" width="60vh" p={1} bgcolor="grey.300">
               <Table aria-label="simple table" className="table">
                 <TableHead>
                   <TableRow>
@@ -107,7 +107,7 @@ export default class App extends Component {
                 </TableBody>
               </Table>
             </Box>
-            <Box className="dataBox" width="50vh" p={1} bgcolor="grey.300">
+            <Box className="dataBox" width="60vh" p={1} bgcolor="grey.300">
               <Table aria-label="simple table" className="table">
                 <TableHead>
                   <TableRow>
@@ -127,7 +127,7 @@ export default class App extends Component {
             </Box>
           </Box>
           <Box className="secondRow" display="flex" flexDirection="row" p={1} m={1} bgcolor="background.paper">
-            <Box className="dataBox" width="50vh" p={1} bgcolor="grey.300">
+            <Box className="dataBox" width="60vh" p={1} bgcolor="grey.300">
               <Table aria-label="simple table" className="table">
                 <TableHead>
                   <TableRow>
@@ -145,7 +145,7 @@ export default class App extends Component {
                 </TableBody>
               </Table>
             </Box>
-            <Box className="dataBox" width="50vh" p={1} bgcolor="grey.300">
+            <Box className="dataBox" width="60vh" p={1} bgcolor="grey.300">
               <Table aria-label="simple table" className="table">
                 <TableHead>
                   <TableRow>
