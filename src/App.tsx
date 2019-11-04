@@ -5,7 +5,8 @@ import './App.css';
 
 interface IState {
   timePassed: number;
-  data: User[]
+  data: User[],
+  loading:boolean;
 }
 
 export default class App extends Component {
@@ -16,6 +17,7 @@ export default class App extends Component {
     this.state = {
       timePassed: 0,
       data: [],
+      loading:true,
     }
 
   }
@@ -59,8 +61,10 @@ export default class App extends Component {
     const sortedData = this.sortData(arrayOfData);
 
     this.setState({
-      data: sortedData
+      data: sortedData,
+      loading:false,
     });
+
 
   }
 
@@ -75,6 +79,12 @@ export default class App extends Component {
   }
 
   render() {
+    while (this.state.loading)
+    {
+        return (
+          <div>Loading</div>
+        )
+    }
     return (
       <div>
         <div>

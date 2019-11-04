@@ -1,11 +1,15 @@
 .dataBox {
-    border-right: 10px white solid;
+    border-right: 2vw white solid;
     scroll-behavior: smooth;
     overflow-y: scroll;
-    height: 35vh;
+    height: 40vh;
     padding-top: 0px !important;
     padding:0px !important;
     border-radius: 5px;
+}
+
+thead {
+    height: 0.2vh;
 }
 
 .dataBox thead th {
@@ -14,14 +18,18 @@
     background-color: grey;
 }
 
+.MuiTableCell-root {
+    padding: 1vw !important; 
+}
+
 .firstRow {
-    padding-top: 60px !important;
+    padding-top: 5vh !important;
     padding-left: 80px !important;
     padding-right: 80px !important;
 }
 
 .secondRow {
-    padding-top: 60px !important;
+    padding-top: 5vh !important;
     padding-left: 80px !important;
     padding-right: 80px !important;
 }
