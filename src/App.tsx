@@ -11,12 +11,11 @@ interface IState {
 export default class App extends Component {
   state: IState;
 
-  constructor(props:any)
-  {
+  constructor(props: any) {
     super(props);
     this.state = {
       timePassed: 0,
-      data:[],
+      data: [],
     }
 
   }
@@ -57,12 +56,12 @@ export default class App extends Component {
       },
     ]
 
-    const sortedData =  this.sortData(arrayOfData);
+    const sortedData = this.sortData(arrayOfData);
 
     this.setState({
-      data:sortedData
+      data: sortedData
     });
-    
+
   }
 
   sayHello() {
@@ -71,8 +70,8 @@ export default class App extends Component {
     }
   }
 
-  sortData(data:User[]) {
-    return data.sort((a,b)=>b.result-a.result);
+  sortData(data: User[]) {
+    return data.sort((a, b) => b.result - a.result);
   }
 
   render() {
@@ -84,15 +83,15 @@ export default class App extends Component {
               <Table aria-label="simple table" className="table">
                 <TableHead>
                   <TableRow>
-                    <TableCell align="right">Name</TableCell>
-                    <TableCell align="right">Result</TableCell>
+                    <TableCell align="right"><h4>Name</h4></TableCell>
+                    <TableCell align="right"><h4>Result</h4></TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {this.state.data.map(row => (
                     <TableRow key={row.name}>
-                      <TableCell component="th" scope="row">{row.name}</TableCell>
-                      <TableCell align="right">{row.result}</TableCell>
+                      <TableCell component="th" scope="row"><p>{row.name}</p></TableCell>
+                      <TableCell align="right"><p>{row.result}</p></TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -102,15 +101,15 @@ export default class App extends Component {
               <Table aria-label="simple table" className="table">
                 <TableHead>
                   <TableRow>
-                    <TableCell align="right">Name</TableCell>
-                    <TableCell align="right">Result</TableCell>
+                    <TableCell align="right"><h4>Name</h4></TableCell>
+                    <TableCell align="right"><h4>Result</h4></TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {this.state.data.map(row => (
                     <TableRow key={row.name}>
-                      <TableCell component="th" scope="row">{row.name}</TableCell>
-                      <TableCell align="right">{row.result}</TableCell>
+                      <TableCell component="th" scope="row"><p>{row.name}</p></TableCell>
+                      <TableCell align="right"><p>{row.result}</p></TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -122,15 +121,15 @@ export default class App extends Component {
               <Table aria-label="simple table" className="table">
                 <TableHead>
                   <TableRow>
-                    <TableCell align="right">Name</TableCell>
-                    <TableCell align="right">Result</TableCell>
+                    <TableCell align="right"><h4>Name</h4></TableCell>
+                    <TableCell align="right"><h4>Result</h4></TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {this.state.data.map(row => (
                     <TableRow key={row.name}>
-                      <TableCell component="th" scope="row">{row.name}</TableCell>
-                      <TableCell align="right">{row.result}</TableCell>
+                      <TableCell component="th" scope="row"><p>{row.name}</p></TableCell>
+                      <TableCell align="right"><p>{row.result}</p></TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -140,21 +139,21 @@ export default class App extends Component {
               <Table aria-label="simple table" className="table">
                 <TableHead>
                   <TableRow>
-                    <TableCell align="right">Name</TableCell>
-                    <TableCell align="right">Result</TableCell>
+                    <TableCell align="right"><h4>Name</h4></TableCell>
+                    <TableCell align="right"><h4>Result</h4></TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {this.state.data.map(row => (
                     <TableRow key={row.name}>
-                      <TableCell component="th" scope="row">{row.name}</TableCell>
-                      <TableCell align="right">{row.result}</TableCell>
+                      <TableCell component="th" scope="row"><p>{row.name}</p></TableCell>
+                      <TableCell align="right"><p>{row.result}</p></TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
             </Box>
-            </Box>
+          </Box>
         </div>
         <div>
           {
