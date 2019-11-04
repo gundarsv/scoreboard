@@ -4,21 +4,36 @@ import { User } from './Interfaces/User';
 import './App.css';
 
 interface IState {
-  timePassed: Number;
+  timePassed: number;
   data: User[]
 }
 
 export default class App extends Component {
-  state: IState = {
-    timePassed: 0,
-    data: [
+  state: IState;
+
+  constructor(props:any)
+  {
+    super(props);
+    this.state = {
+      timePassed: 0,
+      data:[],
+    }
+
+  }
+
+  componentDidMount() {
+    setInterval(() => this.setState({
+      timePassed: +this.state.timePassed + 1
+    }), 1000);
+
+    let arrayOfData = [
       {
         name: "Gundars",
-        result: 7898796
+        result: 78456
       },
       {
         name: "David",
-        result: 7898796
+        result: 15642
       },
       {
         name: "Dominik",
@@ -40,19 +55,24 @@ export default class App extends Component {
         name: "Hi",
         result: 7898796
       },
-    ],
-  }
+    ]
 
-  componentDidMount() {
-    setInterval(() => this.setState({
-      timePassed: +this.state.timePassed + 1
-    }), 1000)
+    const sortedData =  this.sortData(arrayOfData);
+
+    this.setState({
+      data:sortedData
+    });
+    
   }
 
   sayHello() {
     if (+this.state.timePassed % 60 === 0) {
       return "Hello"
     }
+  }
+
+  sortData(data:User[]) {
+    return data.sort((a,b)=>b.result-a.result);
   }
 
   render() {
