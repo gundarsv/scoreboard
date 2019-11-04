@@ -59,3 +59,7 @@ h4 {
     margin: 0;
     font-size: 1vw;
 }
+
+.MuiTableRow-root {
+    border-bottom:solid #ffffff38;
+}
