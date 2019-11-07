@@ -1,0 +1,79 @@
+{
+	"results": [
+		{
+			"name": "Test2",
+			"ranking": [
+				{
+					"rank": "1",
+					"name": "Intrinsics",
+					"result": "7"
+				},
+				{
+					"rank": "2",
+					"name": "STL",
+					"result": "8"
+				},
+				{
+					"rank": "3",
+					"name": "Performant",
+					"result": "34"
+				},
+				{
+					"rank": "",
+					"name": "Default",
+					"result": "74"
+				}
+			]
+		},
+		{
+			"name": "Test1",
+			"ranking": [
+				{
+					"rank": "1",
+					"name": "Performant",
+					"result": "785"
+				},
+				{
+					"rank": "2",
+					"name": "STL",
+					"result": "1594"
+				},
+				{
+					"rank": "3",
+					"name": "Intrinsics",
+					"result": "failed"
+				},
+				{
+					"rank": "",
+					"name": "Default",
+					"result": "683"
+				}
+			]
+		},
+		{
+			"name": "Overall Winners",
+			"ranking": [
+				{
+					"rank": "1",
+					"name": "Performant",
+					"result": "819"
+				},
+				{
+					"rank": "2",
+					"name": "STL",
+					"result": "1602"
+				},
+				{
+					"rank": "3",
+					"name": "Intrinsics",
+					"result": "failed"
+				},
+				{
+					"rank": "",
+					"name": "Default",
+					"result": "757"
+				}
+			]
+		}
+	]
+}
