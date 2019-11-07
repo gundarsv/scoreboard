@@ -8,4 +8,8 @@ export interface Ranking {
     name:   string;
     result: string;
 }
+
+export interface JsonData {
+    results: Result[];
+}
   

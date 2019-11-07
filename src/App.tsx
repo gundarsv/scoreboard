@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Result } from './Interfaces/Results';
+import { Result, JsonData } from './Interfaces/Results';
 import Results from './Components/Results/Results';
 
 interface IState {
   data?: Result[],
-  loading:boolean
+  loading: boolean
 }
 
 export default class App extends React.Component {
@@ -13,7 +13,7 @@ export default class App extends React.Component {
   constructor(props: any) {
     super(props);
     this.state = {
-      loading:true
+      loading: true
     }
   }
 
@@ -26,18 +26,27 @@ export default class App extends React.Component {
 
   loadData() {
     console.log("Data loaded");
-    import('./Data/result.json').then(result => {
-      const sortedData = this.sortData(result.results);
+    var json;
+    try {
+      json = require('./Data/result.json') as JsonData;
+      var sortedData = this.sortData(json);
       this.setState({
-      data: sortedData,
-      loading: false,
-    })
-    });
-    
+        data: sortedData,
+        loading: false,
+      });
+    }
+    catch (e) {
+      console.log(e)
+      setInterval(() => {
+        this.loadData();
+      }, 5000);
+    }
   }
 
-  sortData(data: Result[]) {
-    return data.sort((a, b) => +b.ranking - +a.ranking);
+  sortData(data: JsonData) {
+    var currentData = data.results;
+    currentData.map(a => a.ranking.sort((a, b) => +a.rank - +b.rank));
+    return currentData;
   }
 
   render() {
@@ -46,8 +55,9 @@ export default class App extends React.Component {
         <div>Loading</div>
       )
     }
+    console.log(this.state.data);
     return (
-        <Results data={this.state.data}/>
+      <Results data={this.state.data} />
     )
   }
 }
