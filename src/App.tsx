@@ -45,7 +45,17 @@ export default class App extends React.Component {
 
   sortData(data: JsonData) {
     var currentData = data.results;
-    currentData.map(a => a.ranking.sort((a, b) => +a.rank - +b.rank));
+    currentData.map(a => a.ranking.sort((a, b) => {
+      if (a.rank === "")
+      {
+        return +1;
+      }
+      if (b.rank === "")
+      {
+        return -1;
+      }
+      return +a.rank - +b.rank;
+    }));
     return currentData;
   }
 
