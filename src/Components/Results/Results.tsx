@@ -27,21 +27,21 @@ export default class Results extends React.Component<IProps> {
                                 <Typography variant="h6" id="tableTitle">
                                    {result.name}
                                 </Typography>
-                                <Box className="dataBox"  width="28vw" height="35vh" p={1} bgcolor="grey.300">
+                                <Box className="dataBox" width="28vw" height="35vh" p={1} bgcolor="grey.300">
                                     <Table title={result.name} aria-label="simple table" className="table">
                                         <TableHead>
                                             <TableRow>
-                                                <TableCell align="center"><h4>Rank</h4></TableCell>
-                                                <TableCell align="center"><h4>Name</h4></TableCell>
-                                                <TableCell align="center"><h4>Result</h4></TableCell>
+                                                <TableCell className={"rankColumn"} align="center"><h4>Rank</h4></TableCell>
+                                                <TableCell align="left"><h4>Name</h4></TableCell>
+                                                <TableCell align="left"><h4>Result</h4></TableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
                                             {result.ranking.map(rank => (
                                                 <TableRow key={rank.name}>
-                                                    <TableCell align="center"><p>{rank.rank}</p></TableCell>
-                                                    <TableCell align="center"><p>{rank.name}</p></TableCell>
-                                                    <TableCell align="center"><p>{rank.result}</p></TableCell>
+                                                    <TableCell className={"rankColumn"} align="center"><p>{rank.rank}</p></TableCell>
+                                                    <TableCell align="left"><p>{rank.name}</p></TableCell>
+                                                    <TableCell align="left"><p>{rank.result}</p></TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableBody>
@@ -58,21 +58,21 @@ export default class Results extends React.Component<IProps> {
                             <Typography variant="h6" id="tableTitle">
                                {result.name}
                             </Typography>
-                            <Box className="dataBox"  width="28vw" height="35vh" p={1} bgcolor="grey.300">
+                            <Box className="dataBox" width="28vw" height="35vh" p={1} bgcolor="grey.300">
                                 <Table title={result.name} aria-label="simple table" className="table">
                                     <TableHead>
                                         <TableRow>
-                                            <TableCell align="center"><h4>Rank</h4></TableCell>
-                                            <TableCell align="center"><h4>Name</h4></TableCell>
-                                            <TableCell align="center"><h4>Result</h4></TableCell>
+                                            <TableCell className={"rankColumn"} align="center"><h4>Rank</h4></TableCell>
+                                            <TableCell align="left"><h4>Name</h4></TableCell>
+                                            <TableCell align="left"><h4>Result</h4></TableCell>
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
                                         {result.ranking.map(rank => (
                                             <TableRow key={rank.name}>
-                                                <TableCell align="center"><p>{rank.rank}</p></TableCell>
-                                                <TableCell align="center"><p>{rank.name}</p></TableCell>
-                                                <TableCell align="center"><p>{rank.result}</p></TableCell>
+                                                <TableCell className={"rankColumn"} align="center"><p>{rank.rank}</p></TableCell>
+                                                <TableCell align="left"><p>{rank.name}</p></TableCell>
+                                                <TableCell align="left"><p>{rank.result}</p></TableCell>
                                             </TableRow>
                                         ))}
                                     </TableBody>

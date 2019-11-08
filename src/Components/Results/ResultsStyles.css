@@ -15,7 +15,7 @@ thead {
 .dataBox thead th {
     position: sticky;
     top: 0;
-    background-color: grey;
+    background-color: #0064c8;
 }
 
 .MuiTableCell-root {
@@ -23,9 +23,21 @@ thead {
 }
 
 .firstRow {
-    padding-top: 5vh !important;
+    padding-top: 2vh !important;
     padding-left: 80px !important;
     padding-right: 80px !important;
+}
+
+h4{
+    color: white;
+}
+
+.dataBox {
+    background-color: #0e8ee940 !important;
+}
+
+.rankColumn {
+    width: 10%;
 }
 
 .secondRow {
@@ -45,7 +57,7 @@ thead {
 }
  
 .dataBox::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
+  background-color: #0e8ee940;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -61,5 +73,11 @@ h4 {
 }
 
 .MuiTableRow-root {
-    border-bottom:solid #ffffff38;
+    border-bottom:solid 2px #0e8ee917;
+}
+
+.heading {
+    padding: 3vh 0 0 4vh;
+    text-align: left;
+    color: #0064c8;
 }

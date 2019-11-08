@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Result, JsonData } from './Interfaces/Results';
 import Results from './Components/Results/Results';
+import { Typography } from '@material-ui/core';
 
 interface IState {
   data?: Result[],
@@ -50,7 +51,10 @@ export default class App extends React.Component {
     }
     console.log(this.state.data);
     return (
-      <Results data={this.state.data} />
+      <div>
+        <Typography className={"heading"} variant="h2"> C++ Coding Challange</Typography>
+        <Results data={this.state.data} />
+      </div>
     )
   }
 }
