@@ -27,7 +27,7 @@ export default class Results extends React.Component<IProps> {
                                 <Typography variant="h6" id="tableTitle">
                                    {result.name}
                                 </Typography>
-                                <Box className="dataBox"  width="60vh" p={1} bgcolor="grey.300">
+                                <Box className="dataBox"  width="28vw" height="35vh" p={1} bgcolor="grey.300">
                                     <Table title={result.name} aria-label="simple table" className="table">
                                         <TableHead>
                                             <TableRow>
@@ -58,7 +58,7 @@ export default class Results extends React.Component<IProps> {
                             <Typography variant="h6" id="tableTitle">
                                {result.name}
                             </Typography>
-                            <Box className="dataBox"  width="60vh" p={1} bgcolor="grey.300">
+                            <Box className="dataBox"  width="28vw" height="35vh" p={1} bgcolor="grey.300">
                                 <Table title={result.name} aria-label="simple table" className="table">
                                     <TableHead>
                                         <TableRow>

@@ -29,9 +29,8 @@ export default class App extends React.Component {
     var json;
     try {
       json = require('./Data/result.json') as JsonData;
-      var sortedData = this.sortData(json);
       this.setState({
-        data: sortedData,
+        data: json.results,
         loading: false,
       });
     }
@@ -41,22 +40,6 @@ export default class App extends React.Component {
         this.loadData();
       }, 5000);
     }
-  }
-
-  sortData(data: JsonData) {
-    var currentData = data.results;
-    currentData.map(a => a.ranking.sort((a, b) => {
-      if (a.rank === "")
-      {
-        return +1;
-      }
-      if (b.rank === "")
-      {
-        return -1;
-      }
-      return +a.rank - +b.rank;
-    }));
-    return currentData;
   }
 
   render() {

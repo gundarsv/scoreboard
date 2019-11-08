@@ -1,7 +1,7 @@
 .dataBox {
     border-right: 2vw white solid;
     scroll-behavior: smooth;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 40vh;
     padding-top: 0px !important;
     padding:0px !important;
