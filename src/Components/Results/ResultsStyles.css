@@ -8,18 +8,12 @@
     border-radius: 5px;
 }
 
-thead {
-    height: 0.2vh;
-}
-
 .dataBox thead th {
     position: sticky;
+    height: 20px;
     top: 0;
+    padding: 7px !important;
     background-color: #0064c8;
-}
-
-.MuiTableCell-root {
-    padding: 1vw !important; 
 }
 
 .firstRow {
@@ -72,12 +66,13 @@ h4 {
     font-size: 1vw;
 }
 
-.MuiTableRow-root {
+.MuiTableRow-root td{
     border-bottom:solid 2px #0e8ee917;
+    padding: 7px !important; 
 }
 
 .heading {
-    padding: 3vh 0 0 4vh;
+    padding: 3vh 0 0 88px;
     text-align: left;
     color: #0064c8;
 }
